@@ -147,9 +147,9 @@ logo = ("""
 \x1b[1;91m●\x1b[1;92m═━═━═━═━═━═━═━═━═━═\x1b[1;91m❴\033[47m\033[1;30mHM-MONIR\033[40m\033[00m\x1b[1;91m❵\x1b[1;92m═━═━═━═━═━═━═━═━═━═━═\x1b[1;91m●
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 ┃ Tools    : RENDOM CLONE               ┃
-┃ Owner    : MD MONIR                   ┃
-┃ Facebook : MD MARUF AHMED ┃
-┃ What'sapp: +8801972852830            ┃
+┃ Owner    : Tomar Nani                   ┃
+┃ Facebook : Emon Hossan Miazi  ┃
+┃ What'sapp: +8801875828427            ┃
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛""")
 
 try:
