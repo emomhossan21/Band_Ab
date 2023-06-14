@@ -124,14 +124,14 @@ def MONIR_programmer():
     MONIR = input('\n\x1b[1;32m   CHOOSE : ')
     if MONIR == '1':
     	os.system('espeak -a 300 "random cloning start"')
-    os.system('xdg-open https://www.facebook.com/valo.basa.top10.monir')
+    os.system('xdg-open https://https://www.facebook.com/120Xuspa')
     time.sleep(5)
     MONIR_afridy()
     if MONIR == '2':
-        os.system('xdg-open https://www.facebook.com/valo.basa.top10.monir')
+        os.system('xdg-open https://www.facebook.com/120Xuspa')
         MONIR_afridy()
     if MONIR == '3':
-        os.system('xdg-open https://t.me/monir123')
+        os.system('xdg-open https://emonhossanmiazi')
         MONIR_afridy()
     if MONIR == '0': 
         os.system('exit')
