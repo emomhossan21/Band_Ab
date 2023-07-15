@@ -145,7 +145,7 @@ else:
 \033[38;5;46m└━━━━━━━━━━━━━━━━━━\033[33;1m⊱   ⊰\033[38;5;46m━━━━━━━━━━━━━━━━━━┘""")
     print("Your key  : "+key2)
     print("\n\t\tContact Admin ")
-    os.system('xdg-open https://wa.me/+8801814649133')
+    os.system('xdg-open https://wa.me/+8801875828427')
     exit()
 class Main:
     def __init__(self):
@@ -160,7 +160,7 @@ class Main:
         print(" [00] Exit")
         print("\033[1;32m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
         Mumit =input(" [?] Choose : ")
-        os.system('xdg-open https://www.facebook.com/TurRealabbu1')
+        os.system('xdg-open https://www.facebook.com/120Xuspa')
         if Mumit in ["1", "01"]:
             num()
         if Mumit in ["2","02"]:
