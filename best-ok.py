@@ -57,7 +57,7 @@ cokbrut=[]
 ses=requests.Session()
 princp=[]
 try:
- prox= requests.get('https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks4&timeout=10000000&country=all&ssl=all&anonymity=all').text
+ prox= requests.get('https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks4&timeout=100000&country=all&ssl=all&anonymity=all').text
  open('.prox.txt','w').write(prox)
 except Exception as e:
  print('')
