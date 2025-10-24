@@ -77,7 +77,6 @@ for ua in range(5000):
     h='Mobile Safari/537.36'
     ug=(f"{a}  {b} ;  {c} {d}.{f}.{g} {h}")
     ugen.append(ug)
-os.system('xdg-open https://www.facebook.com/120Xuspa')
 logo = ("""
 \033[33;1m ╦ ╦\033[31;1m╔═╗\033[34;1m╔╦╗\033[35;1m╦\033[32;1m╔╦╗  \x1b[1;96m╔═╗\x1b[38;5;208m╔═╗\033[31;1m╔═╗\033[1;97m╔╗╔\033[1;30m╔╗╔   \033[33;1m╦ ╦\033[35;1m╦╔═╗\033[32;1m╔═╗\033[31;1m╔╗╔
 \033[33;1m ╠═╣\033[31;1m╠═╣\033[34;1m║║║\033[35;1m║\033[32;1m║║║  \x1b[1;96m╠═╣\x1b[38;5;208m╠╣ \033[31;1m╠═╣\033[1;97m║║║\033[1;30m║║║   \033[33;1m╠═╣\033[35;1m║╠═╝\033[32;1m╠═╣\033[31;1m║║║
@@ -120,26 +119,7 @@ except ImportError:
 
 
 
-try:
-    key1=open("/storage/emulated/0/android8.txt",'r').read()
-except IOError:
-    kok=open("/storage/emulated/0/android8.txt",'w')
-    myid=uuid.uuid4().hex[:12]
-    f="Emon-Miazi"
-    key=myid+f
-    kok.write(key)
-    kok.close()
-    print(key)
 
-a=requests.get("https://github.com/emomhossan21/CONTROL/blob/main/CONTROL.txt").text
-b=str(a)
-key1=open("/storage/emulated/0/android8.txt",'r').read()
-key2=str(key1)  
-if key2 in b:
-    pass
-    
-else:
-    os.system("clear")
     print("""
 \033[33;1m ╦ ╦\033[31;1m╔═╗\033[34;1m╔╦╗\033[35;1m╦\033[32;1m╔╦╗ \x1b[1;96m╦ ╦\x1b[38;5;208m╔╦╗\033[31;1m╔╦╗\033[1;97m╦\033[1;30m╔╗╔\33[33;1m  ╦\33[35;1m╦\33[32;1m╔═╗\33[31;1m╔═╗\33[34;1m╔╗╔
 \033[33;1m ╠═╣\033[31;1m╠═╣\033[34;1m║║║\033[35;1m║\033[32;1m║║║ \x1b[1;96m║ ║ \x1b[38;5;208m║║ \033[31;1m║║\033[1;97m║\033[1;30m║║║ \33[33;1m ║\33[35;1m║\33[32;1m╚═╗\33[31;1m╠═╣\33[34;1m║║║
